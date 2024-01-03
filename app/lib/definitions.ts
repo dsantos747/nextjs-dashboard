@@ -86,3 +86,28 @@ export type InvoiceForm = {
   amount: number;
   status: 'pending' | 'paid';
 };
+
+export type CustomerForm = {
+  id: string;
+  name: string;
+  email: string;
+  image_url: string | '/customers/emil-kowalski.png';
+};
+
+export type InvoiceFormState = {
+  errors?: {
+    customerId?: string[];
+    amount?: string[];
+    status?: string[];
+  };
+  message?: string | null;
+};
+
+export type CustomerFormState = {
+  errors?: {
+    name?: string[];
+    email?: string[];
+    imageUrl?: string[];
+  };
+  message?: string | null;
+};
